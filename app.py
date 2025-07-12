@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 from services.transcript_service import get_transcript, extract_video_id
 from services.vector_store_service import split_text, setup_vector_store
