@@ -6,6 +6,9 @@ import streamlit as st
 from services.transcript_service import get_transcript, extract_video_id
 from services.vector_store_service import split_text, setup_vector_store
 from chains.query_chain import build_chain
+import sqlite3
+
+print("sqlite_version",sqlite3.sqlite_version)
 
 st.set_page_config(page_title="YouTube Q&A", layout="wide")
 st.title("YouTube Video Q&A with AI")
